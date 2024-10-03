@@ -17,3 +17,6 @@ Select distinct top(4) CustomerName, Phone FROM [KCC].[dbo].[Customers] --this w
 Select * FROM [KCC].[dbo].[Customers]  --this gives all the columns of the cutomers table
 Select top(3)* FROM [KCC].[dbo].[Customers] --this gives all the columns of the top 3 raws
 Select * FROM [KCC].[dbo].[Customers] where state='WA' --this gives all the columns of the cutomers in WA state
+Select * FROM [KCC].[dbo].[Customers] where state<>'WA' /*this gives all the columns that does not have WA as the state
+                                                                  we can use != sign also for this*/
+Select * FROM [KCC].[dbo].[Customers] where state ='WA' or state = 'AL' -- this gives all the columns of the raws that have state as WA or AL
