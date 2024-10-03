@@ -21,3 +21,16 @@ Select * FROM [KCC].[dbo].[Customers] where state<>'WA' /*this gives all the col
                                                                   we can use != sign also for this*/
 Select * FROM [KCC].[dbo].[Customers] where state ='WA' or state = 'AL' -- this gives all the columns of the raws that have state as WA or AL
 Select * FROM [KCC].[dbo].[Customers] where state IN ('WA', 'AL')    -- this also gives all the columns of the raws that have state as WA or AL
+Select * FROM [KCC].[dbo].[Customers] where state not in ('WA', 'AL')   --this gives all the columns  of the raws that does not have WA/AL as the state
+Select * FROM [KCC].[dbo].[Customers] where CustomerName = 'Tres Delicious' and Country='France' /*this gives all the columns  of the raws that 
+                                                                                                      does have  CustomerName as Tres Delicious and Country as France
+
+
+
+
+
+
+
+
+
+
