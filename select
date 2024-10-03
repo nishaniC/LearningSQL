@@ -24,8 +24,9 @@ Select * FROM [KCC].[dbo].[Customers] where state IN ('WA', 'AL')    -- this als
 Select * FROM [KCC].[dbo].[Customers] where state not in ('WA', 'AL')   --this gives all the columns  of the raws that does not have WA/AL as the state
 Select * FROM [KCC].[dbo].[Customers] where CustomerName = 'Tres Delicious' and Country='France' /*this gives all the columns  of the raws that 
                                                                                                       does have  CustomerName as Tres Delicious and Country as France
-
-
+Select * FROM [KCC].[dbo].[Customers] where CustomerName = 'Tres Delicious' and (Country='France'or Country='United States')
+Select * FROM [KCC].[dbo].[Customers] where CustomerName like 'A%' and (Country='France'or Country='United States') -- this gives all the columns of the raws that have customer names starting wiht A and country as france or united states
+Select * FROM [KCC].[dbo].[Customers] where CustomerName not like 'A%' and (Country='France'or Country='United States')
 
 
 
