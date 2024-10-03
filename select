@@ -1,15 +1,19 @@
 #querrying the top 10 raws from a table
-SELECT TOP (2) [CustomerID] #list down the columns that you want 
-      ,[CustomerName]
+SELECT TOP (2) [CustomerID] --list down the columns that you want 
+      ,[CustomerName] as [Customer Name] -- the column name will be shown as Customer Name not CustomerName
       ,[Address]
-      ,[City]
+      ,[City]  -- distinct makes sure a city name doe not get repeated in the querry
       ,[State]
       ,[Zip]
       ,[Country]
       ,[Notes]
-  FROM [KCC].[dbo].[Customers]  # customers is the table name, KCC is the DB name  
+  FROM [KCC].[dbo].[Customers]  -- customers is the table name, KCC is the DB name  
 
 #primary key is the least number of columns you need to identify a column
 
-Select top(5) CustomerName, Phone FROM [KCC].[dbo].[Customers]  #this will give you the top 5 customer name and phone from the customers table 
-Select CustomerName, Phone FROM [KCC].[dbo].[Customers]         #this will give you all the customer name and phone from the customers table 
+Select top(5) distinct CustomerName, Phone FROM [KCC].[dbo].[Customers]  --this will give you the top 5 customer names and phone from the customers table 
+Select CustomerName, Phone FROM [KCC].[dbo].[Customers]         --this will give you all the customer name and phone from the customers table 
+Select distinct top(4) CustomerName, Phone FROM [KCC].[dbo].[Customers] --this will give you the top 4 unique customer names and phone from the customers table 
+Select * FROM [KCC].[dbo].[Customers]  --this gives all the columns of the cutomers table
+Select top(3)* FROM [KCC].[dbo].[Customers] --this gives all the columns of the top 3 raws
+Select * FROM [KCC].[dbo].[Customers] where state='WA' --this gives all the columns of the cutomers in WA state
