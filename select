@@ -9,7 +9,7 @@ SELECT TOP (2) [CustomerID] --list down the columns that you want
       ,[Notes]
   FROM [KCC].[dbo].[Customers]  -- customers is the table name, KCC is the DB name  
 
-#primary key is the least number of columns you need to identify a column
+--primary key is the least number of columns you need to identify a column
 
 Select top(5) distinct CustomerName, Phone FROM [KCC].[dbo].[Customers]  --this will give you the top 5 customer names and phone from the customers table 
 Select CustomerName, Phone FROM [KCC].[dbo].[Customers]         --this will give you all the customer name and phone from the customers table 
