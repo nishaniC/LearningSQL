@@ -1,4 +1,4 @@
-#querrying the top 10 raws from a table
+#querrying the top 2 raws from a table
 SELECT TOP (2) [CustomerID] --list down the columns that you want 
       ,[CustomerName] as [Customer Name] -- the column name will be shown as Customer Name not CustomerName
       ,[Address]
